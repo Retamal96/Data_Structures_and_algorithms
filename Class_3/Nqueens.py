@@ -17,11 +17,12 @@ if one queen cant be place, you lose
 
 class Nqueens():
 
-    def __init__(self):
+    def __init__(self, size):
         self.board = []
-        for row in range(8):
+        self.size = size
+        for row in range(self.size):
             self.board.append([])
-            for column in range(8):
+            for column in range(self.size):
                 self.board[row].append(' ')
 
         self.numbers_of_queens_on_board = 0       
@@ -30,11 +31,11 @@ class Nqueens():
 
     def solve(self):
         #print(self)
-        if self.numbers_of_queens_on_board == 8:
+        if self.numbers_of_queens_on_board == self.size:
             self.is_solve = True
             print(self)
         if not self.is_solve:
-            for row in range(8):
+            for row in range(self.size):
                 if self._can_put_queen(row):
                     self.board[row][self.numbers_of_queens_on_board] = 'Q' #this works bc we dont need to check columns where we alredy place one Q
                     self.numbers_of_queens_on_board += 1
