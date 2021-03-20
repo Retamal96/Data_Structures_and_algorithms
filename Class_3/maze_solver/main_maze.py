@@ -4,5 +4,5 @@ mapa =  [['S', 'x', 'x', 'x', 'x', 'x', 'x', 'x'], [' ', 'x', 'x', 'x', 'x', 'x'
 Maze = Maze_solver(mapa)
 Maze.solve()
 print(Maze)
-Maze.shortest_path()
+print(Maze.shortest_path())
 
