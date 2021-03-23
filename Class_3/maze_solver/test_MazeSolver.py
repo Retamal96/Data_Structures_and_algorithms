@@ -1,3 +1,8 @@
+"""
+Test took from the CIS2001-Winter2021 github repo
+"""
+
+
 from unittest import TestCase
 from maze_solver import Maze_solver
 
