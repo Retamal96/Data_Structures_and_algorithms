@@ -11,7 +11,7 @@ class linked_list:
 
     def front(self):
         if self._number_of_items == 0:
-            raise ValueError('It's empty')
+            raise ValueError(r"It's empty")
         
         return self._head
 
@@ -33,9 +33,9 @@ class linked_list:
 
     def remove_from_front(self):
         if self._number_of_items == 0:
-            raise ValueError('It's empty')
+            raise ValueError(r"It's empty")
 
-        data = self._head.data
+        #data = self._head.data
 
         self._head.data = None
         self._head = self._head.next
@@ -71,19 +71,19 @@ class LLStack:
     
 
 class LLQueue:
-     def __init__(self):
-        self._data = linked_list()
+        def __init__(self):
+            self._data = linked_list()
 
-    def __len__(self):
-        return len(self._data)
+        def __len__(self):
+            return len(self._data)
 
-    def front(self):
-        return self._data.front()
+        def front(self):
+            return self._data.front()
 
-    def enqueue(self, data):
-        self._data.add_to_back(data)
+        def enqueue(self, data):
+            self._data.add_to_back(data)
     
-    def dequeue(self):
-        self._data.remove_from_front()
+        def dequeue(self):
+            self._data.remove_from_front()
 
 
